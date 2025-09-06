@@ -1,21 +1,4 @@
-// Dark mode detection and handling
-if (
-  window.matchMedia &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches
-) {
-  document.documentElement.classList.add('dark');
-}
-window
-  .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', (event) => {
-    if (event.matches) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  });
-
-// Mobile menu toggle
+// Mobile Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
@@ -25,7 +8,7 @@ hamburger.addEventListener('click', () => {
   mobileMenu.setAttribute('aria-hidden', String(!open));
 });
 
-// Close mobile menu when clicking a link
+// Close Mobile Menu When Clicking A Link
 mobileMenu.addEventListener('click', (e) => {
   if (e.target.tagName === 'A') {
     mobileMenu.classList.remove('open');
@@ -35,7 +18,7 @@ mobileMenu.addEventListener('click', (e) => {
   }
 });
 
-// Smooth scroll for in-page links
+// Smooth Scroll For In-Page Links
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener('click', (e) => {
     const targetId = a.getAttribute('href');
@@ -49,7 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
   });
 });
 
-// Intersection reveal animations
+// Intersection Reveal Animations
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -63,7 +46,7 @@ const io = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-// Animated counters
+// Animated Counters
 function animateCount(el) {
   const target = parseFloat(el.dataset.target);
   const isFloat = !Number.isInteger(target);
@@ -82,7 +65,7 @@ function animateCount(el) {
 
 document.querySelectorAll('.count').forEach(animateCount);
 
-// Back to top button
+// Back To Top Button
 const toTop = document.getElementById('toTop');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 600) {
@@ -92,16 +75,16 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Year in footer
+// Year In Footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// CTA button navigation
+// Cta Button Navigation
 document.getElementById('bookBtn').addEventListener('click', (e) => {
   e.preventDefault();
   document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
 });
 
-// Enhanced scroll effects for navbar
+// Enhanced Scroll Effects For Navbar
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('.nav');
   if (window.scrollY > 50) {
@@ -113,11 +96,11 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Contact form handling
+// Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
-// Custom modal functions instead of alert/confirm
+// Custom Modal Functions Instead Of Alert/Confirm
 function showFormMessage(message, type = 'success') {
   formStatus.textContent = message;
   formStatus.className = `form-status ${type}`;
@@ -131,31 +114,31 @@ function showFormMessage(message, type = 'success') {
 contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  // Get form data
+  // Get Form Data
   const formData = new FormData(contactForm);
   const data = Object.fromEntries(formData);
 
-  // Basic validation
+  // Basic Validation
   if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
     showFormMessage('Please fill in all required fields.', 'error');
     return;
   }
 
-  // Email validation
+  // Email Validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(data.email)) {
     showFormMessage('Please enter a valid email address.', 'error');
     return;
   }
 
-  // Disable submit button
+  // Disable Submit Button
   const submitBtn = contactForm.querySelector('.form-btn');
   const originalText = submitBtn.textContent;
   submitBtn.textContent = 'Sending...';
   submitBtn.disabled = true;
 
   try {
-    // Simulate form submission (replace with actual endpoint)
+    // Simulate Form Submission (Replace With Actual Endpoint)
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     showFormMessage(
@@ -169,13 +152,13 @@ contactForm.addEventListener('submit', async (e) => {
       'error'
     );
   } finally {
-    // Re-enable submit button
+    // Re-Enable Submit Button
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
   }
 });
 
-// Improved touch handling for mobile
+// Improved Touch Handling For Mobile
 let touchStartY = 0;
 document.addEventListener('touchstart', (e) => {
   touchStartY = e.touches[0].clientY;
@@ -185,15 +168,15 @@ document.addEventListener('touchend', (e) => {
   const touchEndY = e.changedTouches[0].clientY;
   const diff = touchStartY - touchEndY;
 
-  // Minimal swipe gesture for mobile navigation enhancement
+  // Minimal Swipe Gesture For Mobile Navigation Enhancement
   if (Math.abs(diff) > 50) {
-    // Optional: Add swipe-based navigation if needed
+    // Optional: Add Swipe-Based Navigation If Needed
   }
 });
 
 // Stats I
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize charts when they come into view
+  // Initialize Charts When They Come Into View
   const chartObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -207,12 +190,12 @@ document.addEventListener('DOMContentLoaded', function () {
     { threshold: 0.3 }
   );
 
-  // Observe all stat cards
+  // Observe All Stat Cards
   document.querySelectorAll('.stat-card').forEach((card) => {
     chartObserver.observe(card);
   });
 
-  // Chart initialization function
+  // Chart Initialization Function
   function initChart(chartId) {
     switch (chartId) {
       case 'clientGrowthChart':
@@ -234,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function renderClientGrowthChart() {
     const ctx = document.getElementById('clientGrowthChart').getContext('2d');
 
-    // Chart data
+    // Chart Data
     const data = {
       labels: ['2020', '2021', '2022', '2023'],
       datasets: [
@@ -255,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
     };
 
-    // Chart options
+    // Chart Options
     const options = {
       responsive: true,
       maintainAspectRatio: false,
@@ -298,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     };
 
-    // Create chart
+    // Create Chart
     new Chart(ctx, {
       type: 'bar',
       data: data,
@@ -310,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function renderTaxSavingsChart() {
     const ctx = document.getElementById('taxSavingsChart').getContext('2d');
 
-    // Chart data
+    // Chart Data
     const data = {
       labels: ['Tax Saved', 'Tax Paid'],
       datasets: [
@@ -327,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
     };
 
-    // Chart options
+    // Chart Options
     const options = {
       responsive: true,
       maintainAspectRatio: false,
@@ -364,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     };
 
-    // Create chart
+    // Create Chart
     new Chart(ctx, {
       type: 'doughnut',
       data: data,
@@ -376,7 +359,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function renderIndustryChart() {
     const ctx = document.getElementById('industryChart').getContext('2d');
 
-    // Chart data
+    // Chart Data
     const data = {
       labels: [
         'Technology',
@@ -409,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
     };
 
-    // Chart options
+    // Chart Options
     const options = {
       indexAxis: 'y',
       responsive: true,
@@ -461,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     };
 
-    // Create chart
+    // Create Chart
     new Chart(ctx, {
       type: 'bar',
       data: data,
@@ -490,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
     };
 
-    // Chart options
+    // Chart Options
     const options = {
       responsive: true,
       maintainAspectRatio: false,
@@ -527,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     };
 
-    // Create chart
+    // Create Chart
     new Chart(ctx, {
       type: 'doughnut',
       data: data,
@@ -537,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Stats II
-// Animate stats when visible
+// Animate Stats When Visible
 const statsSection = document.getElementById('stats-ii');
 let statsAnimated = false;
 
@@ -560,32 +543,32 @@ if (statsSection) {
 function animateStats() {
   const statsGrid = document.querySelector('.stats-grid');
 
-  // Animate KPI numbers
+  // Animate KPI Numbers
   document.querySelectorAll('.kpi-number').forEach((el) => {
     animateKPICount(el);
   });
 
-  // Animate circular progress
+  // Animate Circular Progress
   setTimeout(() => {
     document.querySelectorAll('.circular-progress').forEach((progress) => {
       const percentage = progress.dataset.percentage;
       const circle = progress.querySelector('.progress-ring-progress');
       const numberElement = progress.querySelector('.progress-number');
 
-      // Set CSS custom property for animation
+      // Set CSS Custom Property For Animation
       circle.style.setProperty('--percentage', percentage);
 
-      // Animate the circle
+      // Animate The Circle
       const circumference = 2 * Math.PI * 54;
       const offset = circumference - (percentage / 100) * circumference;
       circle.style.strokeDashoffset = offset;
 
-      // Animate the number
+      // Animate The Number
       animateProgressNumber(numberElement, percentage);
     });
   }, 200);
 
-  // Animate bar charts
+  // Animate Bar Charts
   setTimeout(() => {
     document.querySelectorAll('.bar-fill').forEach((bar) => {
       const width = bar.dataset.width;
@@ -593,7 +576,7 @@ function animateStats() {
     });
   }, 400);
 
-  // Animate industry bars
+  // Animate Industry Bars
   setTimeout(() => {
     document.querySelectorAll('.industry-bar').forEach((bar) => {
       const width = bar.dataset.width;
