@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Modern, professional chartered accountant website -- services, expertise, testimonials, pricing, and contact." />
+    <title>Ledger & Co -- Chartered Accountants</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="https://res.cloudinary.com/dkds78kb3/image/upload/v1757170048/FAVICON-LC_bxi85h.png"
+        type="image/png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="nav" aria-label="Primary">
+        <div class="container nav-inner">
+            <a href="#" class="brand" aria-label="Ledger & Co Home">
+                <span class="brand-logo">LC</span>
+                <span>Ledger & Co</span>
+            </a>
+            <div class="nav-links" role="menubar">
+                <a role="menuitem" href="#services">Services</a>
+                <a role="menuitem" href="#about">About</a>
+                <a role="menuitem" href="#stats">Metrics</a>
+                <a role="menuitem" href="#process">Process</a>
+                <a role="menuitem" href="#testimonials">Testimonials</a>
+                <a role="menuitem" href="#pricing">Pricing</a>
+                <a role="menuitem" href="#contact">Contact</a>
+                <a role="menuitem" href="#" class="btn" id="bookBtn">Book a Consultation</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="container mobile-menu" id="mobileMenu" aria-hidden="true">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#stats">Metrics</a>
+            <a href="#process">Process</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+            <a href="#contact" class="btn" style="margin-top:.6rem;">Book a Consultation</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <div>
+                <span class="chip">Trusted by 350+ businesses</span>
+                <h1 class="headline">Strategic Accounting for Growth-Minded Teams</h1>
+                <p class="subhead">We're chartered accountants combining rigorous compliance with data-driven
+                    insight--so
+                    your books are audit-ready and your decisions are future-ready.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn">Start a Free Consult</a>
+                    <a href="#services" class="btn secondary">Explore Services</a>
+                </div>
+                <div class="metrics">
+                    <div class="metric"><strong class="count" data-target="12">0</strong>+ Years Experience</div>
+                    <div class="metric"><strong class="count" data-target="98">0</strong>% Filing On-Time</div>
+                    <div class="metric"><strong class="count" data-target="4.9">0</strong>/5 Client Rating</div>
+                </div>
+            </div>
+            <aside class="hero-card" aria-label="Interactive ledger preview">
+                <div class="ledger">
+                    <div class="ledger-row"><span>Retainer -- FinOps</span><span>GHS 3,800</span></div>
+                    <div class="ledger-row"><span>Corporate Tax (Q3)</span><span>GHS 12,400</span></div>
+                    <div class="ledger-row"><span>VAT Return</span><span>GHS 2,150</span></div>
+                    <div class="ledger-row"><span>Payroll (15 Staff)</span><span>GHS 5,250</span></div>
+                    <div class="ledger-row"><span class="badge">Forecast: +12% margin</span><span></span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services" class="container">
+        <div class="section-head">
+            <h2>Core Services</h2>
+            <p>Compliance first, strategy always. Tailored to startups, SMEs, and established enterprises.</p>
+        </div>
+        <div class="cards">
+            <article class="card reveal">
+                <div class="icon">📊</div>
+                <h3>Financial Statements</h3>
+                <p>IFRS-compliant statements, management accounts, and board-ready reporting with crisp visuals.</p>
+                <ul>
+                    <li>Monthly/Quarterly Close</li>
+                    <li>Cash Flow Diagnostics</li>
+                    <li>Board Packs & KPIs</li>
+                </ul>
+            </article>
+            <article class="card reveal">
+                <div class="icon">🧾</div>
+                <h3>Tax & Compliance</h3>
+                <p>Corporate tax, VAT, PAYE, and regulatory filings--on time, every time. Risk minimized.</p>
+                <ul>
+                    <li>Tax Planning & Advisory</li>
+                    <li>Objection/Appeals Support</li>
+                    <li>Audit Readiness</li>
+                </ul>
+            </article>
+            <article class="card reveal">
+                <div class="icon">💼</div>
+                <h3>Payroll & HR</h3>
+                <p>Seamless payroll ops, statutory contributions, and staff self-service portals.</p>
+                <ul>
+                    <li>Multi-Entity Payroll</li>
+                    <li>Benefit & Leave Management</li>
+                    <li>Compliance Dashboards</li>
+                </ul>
+            </article>
+            <article class="card reveal">
+                <div class="icon">🧠</div>
+                <h3>Advisory & CFO</h3>
+                <p>Budgeting, unit economics, scenario modeling, and fundraising support.</p>
+                <ul>
+                    <li>Forecasting & Sensitivity</li>
+                    <li>Pricing & Margins</li>
+                    <li>Investor Reporting</li>
+                </ul>
+            </article>
+            <article class="card reveal">
+                <div class="icon">🔒</div>
+                <h3>Internal Controls</h3>
+                <p>Policy design, automation, and monitoring to prevent leakages and ensure governance.</p>
+                <ul>
+                    <li>SoD & Approvals</li>
+                    <li>AP/AR Automation</li>
+                    <li>Expense Controls</li>
+                </ul>
+            </article>
+            <article class="card reveal">
+                <div class="icon">🌍</div>
+                <h3>Cross-Border</h3>
+                <p>Transfer pricing, withholdings, and multi-currency consolidation handled with care.</p>
+                <ul>
+                    <li>TP Documentation</li>
+                    <li>FX Risk Policies</li>
+                    <li>Subsidiary Reporting</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container">
+        <div class="section-head">
+            <h2>About Ledger & Co</h2>
+            <p>Senior chartered accountants based in Accra, serving clients across Africa and beyond.</p>
+        </div>
+
+        <div class="about">
+            <div class="blurb reveal">
+                <h3>Why clients choose us</h3>
+                <p>We blend automation with expertise: reconciliations that run on rails, insights that drive margin,
+                    and governance that scales with your team.</p>
+                <ul>
+                    <li>ICAG & ACCA Certified Partners</li>
+                    <li>Secure client portal & paperless onboarding</li>
+                    <li>Tooling across Xero, QuickBooks, Odoo, SAP B1</li>
+                </ul>
+            </div>
+            <div class="blurb reveal">
+                <h3>Security & Data Privacy</h3>
+                <p>Zero-trust principles, role-based access, and encrypted document exchange. Your data stays yours.</p>
+                <ul>
+                    <li>MFA on all systems</li>
+                    <li>Quarterly access reviews</li>
+                    <li>Encrypted archives & backups</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="container">
+        <div class="section-head">
+            <h2>Growth & Impact Metrics</h2>
+            <p>Clear evidence of how our strategies drive expansion and measurable success.</p>
+        </div>
+
+        <div class="stats-grid">
+            <!-- Chart 1: Client Growth -->
+            <div class="stat-card reveal">
+                <div class="chart-container">
+                    <canvas class="bar-chart" id="clientGrowthChart" width="400" height="250"></canvas>
+                </div>
+                <div class="stat-content">
+                    <h3>Client Growth</h3>
+                    <p>72% increase in client base over the last 3 years</p>
+                </div>
+            </div>
+
+            <!-- Chart 2: Tax Savings -->
+            <div class="stat-card reveal">
+                <div class="chart-container">
+                    <canvas class="doughnut-chart" id="taxSavingsChart" width="400" height="250"></canvas>
+                </div>
+                <div class="stat-content">
+                    <h3>Average Tax Savings</h3>
+                    <p>Clients save an average of 23% on tax liabilities</p>
+                </div>
+            </div>
+
+            <!-- Chart 3: Industry Breakdown -->
+            <div class="stat-card reveal">
+                <div class="chart-container">
+                    <canvas class="bar-chart" id="industryChart" width="400" height="250"></canvas>
+                </div>
+                <div class="stat-content">
+                    <h3>Industry Expertise</h3>
+                    <p>Specialized services across multiple sectors</p>
+                </div>
+            </div>
+
+            <!-- Chart 4: Efficiency Gains -->
+            <div class="stat-card reveal">
+                <div class="chart-container">
+                    <canvas class="doughnut-chart" id="efficiencyChart" width="400" height="250"></canvas>
+                </div>
+                <div class="stat-content">
+                    <h3>Process Efficiency</h3>
+                    <p>65% reduction in financial closing time for clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section II -->
+    <section id="stats-ii" class="container">
+        <div class="section-head">
+            <h2>Excellence in Action</h2>
+            <p>Results that highlight our dedication to efficiency, trust, and client achievement.</p>
+        </div>
+
+        <div class="stats-grid">
+            <!-- Key Performance Indicators -->
+            <div class="stats-overview">
+                <div class="kpi-card reveal">
+                    <div class="kpi-icon">💼</div>
+                    <div class="kpi-content">
+                        <div class="kpi-number" data-target="350">0</div>
+                        <div class="kpi-label">Active Clients</div>
+                        <div class="kpi-trend">+18% YoY</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card reveal">
+                    <div class="kpi-icon">⚡</div>
+                    <div class="kpi-content">
+                        <div class="kpi-number" data-target="24">0</div>
+                        <div class="kpi-label">Avg Response Time (hrs)</div>
+                        <div class="kpi-trend">-35% faster</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card reveal">
+                    <div class="kpi-icon">🎯</div>
+                    <div class="kpi-content">
+                        <div class="kpi-number" data-target="99.2">0</div>
+                        <div class="kpi-label">Accuracy Rate (%)</div>
+                        <div class="kpi-trend">Industry leading</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card reveal">
+                    <div class="kpi-icon">💰</div>
+                    <div class="kpi-content">
+                        <div class="kpi-number" data-target="2.4">0</div>
+                        <div class="kpi-label">Avg Cost Savings (M)</div>
+                        <div class="kpi-trend">Per client annually</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Satisfaction Chart -->
+            <div class="chart-section reveal">
+                <div class="chart-card">
+                    <h3>Client Satisfaction</h3>
+                    <div class="circular-progress" data-percentage="96">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-background" cx="60" cy="60" r="54"></circle>
+                            <circle class="progress-ring-progress" cx="60" cy="60" r="54"></circle>
+                        </svg>
+                        <div class="progress-text">
+                            <span class="progress-number">96</span>
+                            <span class="progress-label">%</span>
+                        </div>
+                    </div>
+                    <p class="chart-description">Based on 200+ client surveys</p>
+                </div>
+            </div>
+
+            <!-- Service Distribution -->
+            <div class="chart-section reveal">
+                <div class="chart-card">
+                    <h3>Service Distribution</h3>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <div class="bar-label">Tax & Compliance</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="85"></div>
+                            </div>
+                            <div class="bar-value">85%</div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Financial Statements</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="72"></div>
+                            </div>
+                            <div class="bar-value">72%</div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Advisory & CFO</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="58"></div>
+                            </div>
+                            <div class="bar-value">58%</div>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar-label">Payroll & HR</div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="64"></div>
+                            </div>
+                            <div class="bar-value">64%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Breakdown -->
+            <div class="chart-section reveal">
+                <div class="chart-card">
+                    <h3>Industry Expertise</h3>
+                    <div class="industry-stats">
+                        <div class="industry-item">
+                            <div class="industry-info">
+                                <span class="industry-name">Fintech</span>
+                                <span class="industry-count">89 clients</span>
+                            </div>
+                            <div class="industry-progress">
+                                <div class="industry-bar" data-width="35"></div>
+                            </div>
+                        </div>
+                        <div class="industry-item">
+                            <div class="industry-info">
+                                <span class="industry-name">Retail</span>
+                                <span class="industry-count">76 clients</span>
+                            </div>
+                            <div class="industry-progress">
+                                <div class="industry-bar" data-width="30"></div>
+                            </div>
+                        </div>
+                        <div class="industry-item">
+                            <div class="industry-info">
+                                <span class="industry-name">SaaS</span>
+                                <span class="industry-count">52 clients</span>
+                            </div>
+                            <div class="industry-progress">
+                                <div class="industry-bar" data-width="20"></div>
+                            </div>
+                        </div>
+                        <div class="industry-item">
+                            <div class="industry-info">
+                                <span class="industry-name">Manufacturing</span>
+                                <span class="industry-count">38 clients</span>
+                            </div>
+                            <div class="industry-progress">
+                                <div class="industry-bar" data-width="15"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="container">
+        <div class="section-head">
+            <h2>How We Work</h2>
+            <p>Transparent, outcome-focused, and time-bound.</p>
+        </div>
+        <div class="process">
+            <div class="step reveal"><strong>1. Diagnostic</strong><br><span>30--60 min discovery to map objectives and
+                    constraints.</span></div>
+            <div class="step reveal"><strong>2. Blueprint</strong><br><span>Documented scope, timeline, and measurable
+                    success criteria.</span></div>
+            <div class="step reveal"><strong>3. Execution</strong><br><span>Automations, reporting, and controls
+                    implemented sprint-by-sprint.</span></div>
+            <div class="step reveal"><strong>4. Handover</strong><br><span>Playbooks, training, and continuous
+                    improvement cadence.</span></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container" aria-labelledby="testimonials-title" id="testimonials">
+        <div class="section-head">
+            <h2 id="testimonials-title">Client Proof</h2>
+            <p>What founders and finance leaders say about us.</p>
+        </div>
+        <div class="testimonials">
+            <figure class="quote reveal">
+                <blockquote>Ledger & Co rebuilt our close in 6 weeks--cash now reconciles daily, and board decks land on
+                    time.</blockquote>
+                <figcaption>-- Ama K., COO, Fintech</figcaption>
+            </figure>
+            <figure class="quote reveal">
+                <blockquote>We went from tax anxiety to tax strategy. The team is meticulous and proactive.</blockquote>
+                <figcaption>-- James O., CEO, Retail</figcaption>
+            </figure>
+            <figure class="quote reveal">
+                <blockquote>Their CFO modeling helped us price correctly and protect margins through FX swings.
+                </blockquote>
+                <figcaption>-- Lydia T., Founder, SaaS</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="container">
+        <div class="section-head">
+            <h2>Pricing</h2>
+            <p>Simple plans that scale with your needs. All plans include a dedicated account manager.</p>
+        </div>
+        <div class="pricing">
+            <div class="price-card reveal">
+                <h3>Starter</h3>
+                <div class="price">GHS 1,900<span style="font-size:.9rem; font-weight:600">/mo</span></div>
+                <ul>
+                    <li>Monthly Bookkeeping</li>
+                    <li>VAT & PAYE Filings</li>
+                    <li>Email Support</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Starter</a>
+            </div>
+            <div class="price-card reveal">
+                <h3>Growth</h3>
+                <span class="ribbon">Popular</span>
+                <div class="price">GHS 4,900<span style="font-size:.9rem; font-weight:600">/mo</span></div>
+                <ul>
+                    <li>Weekly Close</li>
+                    <li>Payroll up to 25</li>
+                    <li>Quarterly Tax Planning</li>
+                </ul>
+                <a class="btn" href="#contact">Choose Growth</a>
+            </div>
+            <div class="price-card reveal">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <ul>
+                    <li>Multi-Entity Consolidation</li>
+                    <li>Controls & Audit Prep</li>
+                    <li>Dedicated CFO Partner</li>
+                </ul>
+                <a class="btn" href="#contact">Talk to Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container">
+        <div class="section-head">
+            <h2>Get in Touch</h2>
+            <p>Ready to transform your financial operations? Let's discuss your needs.</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-card reveal">
+                    <div class="contact-icon">⚲</div>
+                    <h3>Visit Our Office</h3>
+                    <p>Labone Estate<br>Accra, Ghana</p>
+                </div>
+                <div class="contact-card reveal">
+                    <div class="contact-icon">🕻</div>
+                    <h3>Call Us</h3>
+                    <p>+233 24 123 4567<br>+233 50 987 6543</p>
+                </div>
+                <div class="contact-card reveal">
+                    <div class="contact-icon">✉︎</div>
+                    <h3>Email Us</h3>
+                    <p>hello@ledgerco.com<br>advisory@ledgerco.com</p>
+                </div>
+                <div class="contact-card reveal">
+                    <div class="contact-icon">⏱</div>
+                    <h3>Business Hours</h3>
+                    <p>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+                </div>
+            </div>
+            <form class="contact-form reveal" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="financial-statements">Financial Statements</option>
+                        <option value="tax-compliance">Tax & Compliance</option>
+                        <option value="payroll-hr">Payroll & HR</option>
+                        <option value="advisory-cfo">Advisory & CFO</option>
+                        <option value="internal-controls">Internal Controls</option>
+                        <option value="cross-border">Cross-Border</option>
+                        <option value="consultation">General Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required
+                        placeholder="Tell us about your business and how we can help..."></textarea>
+                </div>
+                <button type="submit" class="btn form-btn">Send Message</button>
+                <div class="form-status" id="formStatus"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <span class="brand-logo">LC</span>
+                        <span>Ledger & Co</span>
+                    </div>
+                    <p>Strategic accounting for growth-minded teams. Trusted by 350+ businesses across Africa.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <a href="#services">Financial Statements</a>
+                        <a href="#services">Tax & Compliance</a>
+                        <a href="#services">Advisory & CFO</a>
+                        <a href="#services">Payroll & HR</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="#about">About Us</a>
+                        <a href="#process">Our Process</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <a href="#contact">Contact Us</a>
+                        <a href="#">Client Portal</a>
+                        <a href="#">Resources</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2024</span> Ledger & Co. All rights reserved.</p>
+                <p>Chartered Accountants | ICAG & ACCA Certified</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="btn top" id="toTop" aria-label="Back to top">🢁</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
